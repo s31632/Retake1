@@ -1,0 +1,249 @@
+public class Main {
+    public static void main(String[] args) {
+        Marina marina1 = new Marina("Name","Capacity","Adress","Watercraft<Arraylist>");
+        Watercraft watercraft1 = new Watercraft("registration number","color","model");      Yacht yacht1 = new Yacht;
+        Jetski jetski1 = new Jetski;("enginePower");
+        Yacht yacht1 = new Yacht;("length","luxuryLevel");
+        Boat boat1 = new Boat;("boatType","capasity");
+    }
+}
+
+ public class Watercraft {
+        private String color;
+        private String model;
+        private String registrationNumber;
+        private Integer yearOfProduction;
+
+        public Watercraft(String color, String model, String registrationNumber, yearOfProduction) {
+            this.color = color;
+            this.model = model;
+            this.registrationNumber = registrationNumber;
+            this.yearOfProduction = yearOfProduction;
+        }
+
+        public String getColor() {
+            return color;
+        }
+
+        public void setColor(String color) {
+            this.color = color;
+        }
+
+        public String getModel() {
+            return model;
+        }
+
+        public void setModel(String model) {
+            this.model = model;
+        }
+
+        public String getRegistrationNumber() {
+            return registrationNumber;
+        }
+
+        public void setRegistrationNumber(String registrationNumber) {
+            this.registrationNumber = registrationNumber;
+        }
+
+        public Integer getYearOfProduction() {
+            return yearOfProduction;
+        }
+
+        public void setYearOfProduction(Integer yearOfProduction) {
+            this.yearOfProduction = yearOfProduction;
+        }
+    }
+
+        public void displayInfo() {
+            System.out.println("Color: " + color);
+            System.out.println("Model: " + model);
+            System.out.println("Year of Production: " + yearOfProduction);
+            System.out.println("Registration Number: " + registrationNumber);
+        }
+    }
+
+import java.util.ArrayList;
+
+public class Marina {
+    private String name;
+    private String address;
+    private int maxWatercraftCapacity;
+    private ArrayList<Watercraft> watercrafts;
+
+    public Marina(String name, String address, int maxWatercraftCapacity) {
+        this.name = name;
+        this.address = address;
+        this.maxWatercraftCapacity = maxWatercraftCapacity;
+        this.watercrafts = new ArrayList<>();
+        public void setName;(String) name {
+            if (name == null) {
+
+            }
+            this.name = name;
+        }
+
+        public void setAddress;(String) address) {
+            if (address == null) {
+
+            }
+            this.address = address;
+        }
+
+        public void setMaxWatercraftCapacity(int maxWatercraftCapacity) {
+            if (maxWatercraftCapacity <= 0) {
+
+            }
+            this.maxWatercraftCapacity = maxWatercraftCapacity;
+        }
+
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getMaxWatercraftCapacity() {
+        return maxWatercraftCapacity;
+    }
+
+    public void setMaxWatercraftCapacity(int maxWatercraftCapacity) {
+        this.maxWatercraftCapacity = maxWatercraftCapacity;
+    }
+
+    public ArrayList<Watercraft> getWatercrafts() {
+        return watercrafts;
+    }
+
+    public void setWatercrafts(ArrayList<Watercraft> watercrafts) {
+        this.watercrafts = watercrafts;
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Adress: " + address);
+        System.out.println("MaxWatercraftCapacity" + maxWatercraftCapacity);
+        System.out.println("Watercrafts: " + watercrafts);
+    }
+}
+
+public class Boat {
+        private String boatType;
+        private String capasity;
+
+        public Boat(String boatType, String capasity) {
+            this.boatType = boatType;
+            this.capasity = capasity;
+
+}
+
+    public String getBoatType() {
+        return boatType;
+    }
+
+    public void setBoatType(String boatType) {
+        this.boatType = boatType;
+    }
+
+    public String getCapasity() {
+        return capasity;
+    }
+
+    public void setCapasity(String capasity) {
+        this.capasity = capasity;
+    }
+}
+
+    private void setboatType(String type) {
+        this.boatType = type;
+    }
+
+    private void setCapacity(int capacity) {
+        if (capacity <= 0) {
+            throw new IllegalArgumentException("Capacity cannot be negative or zero");
+        }
+        this.capasity = capacity;
+    }
+
+    public String getboatType() {
+        return boatType;
+    }
+
+    public int getCapacity() {
+        return capasity;
+    }
+
+    @Override
+    public void displayInfo() {
+        displayInfo();
+        System.out.println("Boat Type: " + boatType);
+        System.out.println("Capacity: " +capasity);
+    }
+}
+
+public class Jetski {
+    private String enginePower;
+
+    public Jetski(String enginePower) {
+        this.enginePower = enginePower;
+    }
+
+    public String getEnginePower() {
+        return enginePower;
+    }
+
+    public void setEnginePower(String enginePower) {
+        this.enginePower = enginePower;
+    }
+}
+    @Override
+    public void displayInfo() {
+        System.out.println("EnginePower: " + enginePower);
+    }
+}
+
+public class Yacht {
+    private String length;
+    private String luxuryLevel;
+
+    public Yacht(String length, String luxuryLevel) {
+        this.length = length;
+        this.luxuryLevel = luxuryLevel;
+    }
+
+    public String getLength() {
+        return length;
+    }
+
+    public void setLength(String length) {
+        this.length = length;
+    }
+
+    public String getLuxuryLevel() {
+        return luxuryLevel;
+    }
+
+    public void setLuxuryLevel(String luxuryLevel) {
+        this.luxuryLevel = luxuryLevel;
+    }
+}
+    @Override
+    public void displayInfo() {
+        System.out.println("Length: " + length);
+        System.out.println("Luxurylevel:" + luxuryLevel);
+    }
+}
+
